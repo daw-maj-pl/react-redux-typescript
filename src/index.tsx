@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-class App extends React.Component {
+interface AppProps {
+  color: string;
+}
+
+class App extends React.Component<AppProps> {
   render() {
-    return <div>App</div>;
+    return <div>{this.props.color}</div>;
   }
 }
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-root.render(<App />);
+root.render(<App color="blue" />);
