@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 interface AppProps {
-  color: string;
+  color?: string;
 }
 
 class App extends React.Component<AppProps> {
@@ -14,4 +14,4 @@ class App extends React.Component<AppProps> {
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-root.render(<App color="blue" />);
+root.render(<App />);
